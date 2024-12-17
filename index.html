@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        h1{
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        h2{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="main-heading">404 Not Found</h1>
+        <h1>Portfolio Coming Soon - Nischal Neupane</h1>
+        <h2 id="hidden-message">Laude Mailo</h2>
+    </div>
+
+    <script>
+        // Selecting the elements
+        const mailo1 = document.querySelector('#main-heading'); // First h1
+        const mailo = document.querySelector('#hidden-message'); // Hidden h2
+
+        // Adding event listener to the first h1
+        mailo1.addEventListener('click', () => {
+            mailo.style.display = 'block'; // Make h2 visible when h1 is clicked
+            console.log('Hello'); // Console log for debugging
+        });
+    </script>
+</body>
+</html>
